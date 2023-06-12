@@ -1,6 +1,11 @@
-import React from 'react';
-import { cartItems } from './abaya';
-const Cart = ({ cartItems }) => {
+import React, { useContext } from 'react';
+// import { cartItems } from './abaya';
+
+
+
+
+const Cart = ({  }) => {
+  const cartItem= useContext();
   const handleRemove = (item) => {
     // removeFromCart(item);
   };

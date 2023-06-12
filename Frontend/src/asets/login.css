@@ -1,6 +1,7 @@
 
 .login-container {
-  background: url('E:\E-commerence-website\frontend\public\images\loginback.png');
+  background: url('../../public/images/loginback.png');
+
     display: flex;
     justify-content: center;
     align-items: center;

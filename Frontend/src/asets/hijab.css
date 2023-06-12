@@ -1,0 +1,11 @@
+.hijab-div{
+    display: flex;
+}
+img{
+    width: 30%;
+    height: auto;
+}
+.hijabback{
+    width: 100%;
+    height: auto;
+}

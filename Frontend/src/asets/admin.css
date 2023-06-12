@@ -1,0 +1,21 @@
+.admin-card{
+display: flex;
+padding: 5%;
+border: 1px solid gray;
+}
+.admin-card img{
+width: 200px;
+height: auto;
+}
+.b2{
+    width: 20%;
+    background-color: black;
+    color: white;
+}
+.b2:hover{
+color: black;
+background-color: aliceblue;
+}
+.admin{
+    margin-top: 5%;
+}

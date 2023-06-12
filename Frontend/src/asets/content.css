@@ -1,0 +1,22 @@
+.new-arr{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border-bottom: 1px solid rgb(169, 167, 167);
+    padding: 1%;
+    width: 32%;
+    margin-left: 2%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.b1{
+    width: 65%;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    height: 35px;
+}
+.b1:hover{
+    background-color: white;
+    color: black;
+
+}

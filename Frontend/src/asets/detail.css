@@ -1,0 +1,26 @@
+.detail-div{
+    width: 100%;
+    text-align: center;
+    height: 22vh;
+}
+.detail-div2{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+}
+.sub-detail1{
+    width: 50%;
+    height: auto;
+    background-color:white
+}
+.sub-detail1 img{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+.sub-detail2{
+    width: 50%;
+    height: auto;
+    background-color: white;
+}

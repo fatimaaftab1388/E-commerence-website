@@ -1,0 +1,36 @@
+.img-back{
+    width: 100%;
+    height: auto;
+
+}
+.niqab-heading{
+    width: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.niqab-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.niqab-card{
+    width: calc(30% - 20px);
+    padding: 2px;
+    box-sizing: border-box;
+    margin-top: 2%;
+    border-radius: 20px;
+}
+.parent{
+    width: 100vw;
+    max-width: 100vw;
+    
+}
+.niqab-img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}

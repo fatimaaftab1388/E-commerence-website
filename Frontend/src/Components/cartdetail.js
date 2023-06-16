@@ -1,11 +1,16 @@
 import React, { useContext } from 'react';
 // import { cartItems } from './abaya';
-
+import {AppContext} from './abayacontext';
 
 
 
 const Cart = ({  }) => {
-  const cartItem= useContext();
+
+   const { abaya, setAbaya,hijab,setHijab }= useContext(AppContext);
+   
+   
+   const itm = abaya.filter((item)=> item.selected === true);
+   
   const handleRemove = (item) => {
     // removeFromCart(item);
   };
@@ -13,18 +18,23 @@ const Cart = ({  }) => {
   return (
     <div>
       <h2>Cart</h2>
-      {cartItems.length === 0 ? (
+      {itm.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <ul>
-          {cartItems.map((item) => (
+          {
+          
+          
+          itm.map((item) => (
             <li key={item.name}>
               {item.name}
               <img src={item.image} alt={item.name} />
               {item.price}
               <button onClick={() => handleRemove(item)}>Remove</button>
             </li>
-          ))}
+          ))
+          
+          }
         </ul>
       )}
     </div>

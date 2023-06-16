@@ -6,20 +6,7 @@ import Footer from "./footer";
 
 function Niqab(){
      const[niqab,setAbaya]=useState([
-      {name:'Chiffon Bubble Purple', price:700.00,image:'images/n1.webp'},
-        {name:'Chiffon Bubble Blue', price:700.00,image:'images/n2.webp'},
-        {name:'Chiffon Bubble Green', price:700.00,image:'images/n3.webp'},
-        {name:'Chiffon Bubble Frozen', price:700.00,image:'images/n4.webp'},
-        {name:'Chiffon Bubble Skin', price:700.00,image:'images/n5.webp'},
-        {name:'Chiffon Bubble Yellow', price:700.00,image:'images/n6.webp'},
-        {name:'Chiffon Bubble Gray', price:700.00,image:'images/n7.webp'},
-        {name:'Chiffon Bubble Purple', price:700.00,image:'images/n8.webp'},
-        {name:'Chiffon Bubble Blue', price:700.00,image:'images/n9.webp'},
-        {name:'Chiffon Bubble Green', price:700.00,image:'images/n10.webp'},
-        {name:'Chiffon Bubble Frozen', price:700.00,image:'images/n11.webp'},
-        {name:'Chiffon Bubble Skin', price:700.00,image:'images/n12.webp'},
-        {name:'Chiffon Bubble Yellow', price:700.00,image:'images/n13.webp'},
-        {name:'Chiffon Bubble Gray', price:700.00,image:'images/n14.webp'},
+     
      ]
     );
   

@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 function Header(){
     const nav=useNavigate();
     const handleadmin=()=>{
-        nav('/Components/adminset');
+        nav('/Components/admin');
     }
     return(
         <div className='nav-bar'>

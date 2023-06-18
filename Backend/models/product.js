@@ -14,6 +14,6 @@ const productStructure = mongoose.Schema(
 );
 
 
-const product=mongoose.model('Product',productStructure);
+const productmodel=mongoose.model('Product',productStructure);
 
-export default product;
+export default productmodel;

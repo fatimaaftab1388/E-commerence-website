@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
-
+import ""
 
 const app = express();
 
@@ -14,4 +14,5 @@ app.listen(5000);
 
 app.use(cors());
 app.use(bodyParser.json({extended:true}));
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({extended:true}));
+app.use('/user',userModel)

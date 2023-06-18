@@ -5,6 +5,9 @@
     position: fixed;
     background-color: rgba(255, 255, 255, 0.5);
 }
+.nav-bar:hover{
+    background-color: rgb(255, 255, 255);
+}
 .free-ship{
     text-align: center;
     background-color: rgb(88, 86, 86);

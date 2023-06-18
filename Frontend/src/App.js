@@ -11,7 +11,9 @@ import AbayaDetail from "./Components/abayadetails";
 import Bundles from "./Components/hijabbundles";
 import About from "./Components/aboutus";
 import { useState } from "react";
-import AdminSet from "./Components/adminset";
+import Admin from "./Components/admindashboard";
+import AddProduct from "./Components/adminaddprod";
+
 function App() {
 
   const[cartItems,setCartItems]=useState([]);
@@ -34,8 +36,10 @@ function App() {
       <Route path='/Components/hijabbundles' element={<Bundles />}></Route>
       <Route path='/Components/caps' element={<Caps />} ></Route>
       <Route path='/Components/aboutus' element={<About />}></Route>
-      <Route path='/Components/adminset' element={<AdminSet />}></Route>
+      <Route path='/Components/admin' element={<Admin />}></Route>
+      <Route path='/Components/adminaddprod' element={<AddProduct />}></Route>
       </Routes>
+      
     </div>
   );
 }

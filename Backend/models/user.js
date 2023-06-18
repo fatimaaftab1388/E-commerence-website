@@ -9,4 +9,4 @@ const userStructure=mongoose.Schema(
     }
 );
 const userModel=mongoose.model('Customer',userStructure);
-export default userModel;
+export  {userModel};

@@ -9,3 +9,5 @@ router.post("/", postProduct);
 
 
 router.get("/", getProduct)
+
+export default router;

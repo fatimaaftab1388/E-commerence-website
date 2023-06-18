@@ -5,7 +5,7 @@ const productStructure = mongoose.Schema(
 {
     name:String,
     price: Number,
-    cat:String,
+    category:String,
     selected:{
         type:Boolean,
         default:false

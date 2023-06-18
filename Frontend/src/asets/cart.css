@@ -1,0 +1,40 @@
+.cart-container {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .cart-title {
+    font-size: 5em;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item-image {
+    width: 90px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .cart-item-name {
+    font-weight: bold;
+  }
+  
+  .cart-item-price {
+    margin-left: auto;
+  }
+  
+  .cart-item-remove {
+    margin-left: 10px;
+    background-color: rgb(184, 154, 154);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

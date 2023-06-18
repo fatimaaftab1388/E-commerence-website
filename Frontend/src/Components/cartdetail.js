@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-// import { cartItems } from './abaya';
+import '../asets/cart.css';
 import {AppContext} from './abayacontext';
 
 
@@ -16,29 +16,30 @@ const Cart = ({  }) => {
   };
 
   return (
-    <div>
-      <h2>Cart</h2>
-      {itm.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        <ul>
-          {
-          
-          
-          itm.map((item) => (
-            <li key={item.name}>
-              {item.name}
-              <img src={item.image} alt={item.name} />
-              {item.price}
-              <button onClick={() => handleRemove(item)}>Remove</button>
-            </li>
-          ))
-          
-          }
-        </ul>
-      )}
-    </div>
-  );
+      <div className="cart-container">
+        <div style={{borderBottom:'1 px soid gray'}}>
+        <h2 className="cart-title">Your Cart</h2>
+        </div>
+        {itm.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+          <ul>
+            {itm.map((item) => (
+              <li key={item.name} className="cart-item">
+                <img src={item.image} alt={item.name} className="cart-item-image" />
+                <span className="cart-item-name">{item.name}</span>
+                <span className="cart-item-price">{item.price}</span>
+                <button className="cart-item-remove" onClick={() => handleRemove(item)}>
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+    
+
 };
 
 export default Cart;

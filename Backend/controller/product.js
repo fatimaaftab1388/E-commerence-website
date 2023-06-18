@@ -11,20 +11,20 @@ export const getProduct=async(req,res)=>{
 
 export const postProduct= async (req,res)=>{
     try{
-        const {name, price, category, selected}=req.body
+        const {name, price, category}=req.body
+        console.log(req.file)
         const product={
             name: name,
-            selected: selected,
+            price : price,
             category : category,
-            price : parseInt(price)
-                    
+            image:req.file.path
         }
         
       const newItem= new productmodel(product);
       
        const savedItem = await newItem.save();// Product saved 
       console.log("Saved Item is : ", savedItem);
-      res.status(200).json({savedItem})
+      res.status(200).json({product})
       
         }
         catch(e){

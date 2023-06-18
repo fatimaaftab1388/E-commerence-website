@@ -29,6 +29,7 @@ margin-left: 2%;
   .menu-item {
     color: #333;
     font-weight: bold;
+    cursor: pointer;
     
   }
   

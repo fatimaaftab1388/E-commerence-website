@@ -1,7 +1,7 @@
 import React from 'react';
 import '../asets/admindashboard.css';
 import {useNavigate} from 'react-router-dom';
-import { FaHome, FaPlus, FaTrash, FaClipboardList, FaUsers } from 'react-icons/fa';
+//import { FaHome, FaPlus, FaTrash, FaClipboardList, FaUsers } from 'react-icons/fa';
 
 const Nav = () => {
   const navigate=useNavigate();
@@ -18,11 +18,11 @@ const Nav = () => {
       </div>
       <div className="menu-container">
         <ul className="menu">
-          <li className="menu-item" onClick={handleHome}><FaHome className="menu-icon" />Home</li>
-          <li className="menu-item" onClick={handleAdd}><FaPlus className="menu-icon" />Add Product</li>
-          <li className="menu-item"><FaTrash className="menu-icon" /><a href="#">Delete Product</a></li>
-          <li className="menu-item"><FaClipboardList className="menu-icon" /><a href="#">Orders</a></li>
-          <li className="menu-item"><FaUsers className="menu-icon" /><a href="#">Customers</a></li>
+          <li className="menu-item" onClick={handleHome}>Home</li>
+          <li className="menu-item" onClick={handleAdd}>Add Product</li>
+          <li className="menu-item"><a href="#">Delete Product</a></li> 
+          <li className="menu-item"><a href="#">Orders</a></li>
+          <li className="menu-item"><a href="#">Customers</a></li>
         </ul>
       </div>
     </div>
@@ -30,3 +30,8 @@ const Nav = () => {
 };
 
 export default Nav;
+//<FaTrash className="menu-icon" />
+//<FaClipboardList className="menu-icon" />
+//<FaUsers className="menu-icon" />
+//<FaHome className="menu-icon" />
+//<FaPlus className="menu-icon" />

@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from './adminnav';
 import '../asets/admindashboard.css';
-import axios from 'axios';
 import { useState } from 'react';
 import { addProduct } from '../Service/api';
 
@@ -16,8 +15,8 @@ function AddProduct() {
     const saveDetails= async (e) => {
         e.preventDefault();
         console.log("after saving : ",product);
-        addProduct(product);
-        // await axios.post("http://localhost:5000/product",product);
+        
+        await addProduct(product)
 
     };
     const handleChange = (e) => {
@@ -32,7 +31,7 @@ function AddProduct() {
             <h3>Add New Product</h3>
             <div class="row" style={{marginTop:'2%'}}>
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Product Name" aria-label="First name" name='name' onChnage={handleChange}/>
+                <input type="text" class="form-control" placeholder="Product Name" aria-label="First name" name='name' onChange={handleChange}/>
                 </div>
             </div> 
             <div className='row' style={{marginTop:'2%' }}> 

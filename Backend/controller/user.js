@@ -1,8 +1,9 @@
-import userModel from "../models/user";
+import { userModel } from "../models/user.js";
+
 
 export const postuser= async (req,res)=>{
     try{
-        const {FirstName, LastName, email, password}=req.body
+        const {FirstName, LastName, email, password}=req.body;
         const user={
             FirstName:FirstName,
             LastName:LastName,
@@ -20,4 +21,9 @@ export const postuser= async (req,res)=>{
         catch(e){
             console.log("Error during saving the item is : ",e);
         }
+    }
+
+
+    export const getuser=()=>{
+
     }

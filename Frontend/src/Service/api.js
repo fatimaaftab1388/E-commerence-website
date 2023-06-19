@@ -6,7 +6,7 @@ export const addProduct= async(data)=>{
     return await axios.post(`${url}/product`,data)
 }
 export const addUser=async(user)=>{
-    return await axios.post(`${url}/`,user);
+    return await axios.post(`${url}/user`,user);
 }
 
 axios.get();

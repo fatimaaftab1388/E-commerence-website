@@ -26,6 +26,7 @@ function Login() {
   };
   const addDetails = async (e) => {
     e.preventDefault();
+    console.log(user);
     await addUser(user);
   };
 

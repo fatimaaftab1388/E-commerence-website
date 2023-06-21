@@ -2,9 +2,22 @@ import { useLocation} from "react-router-dom";
 import Header from "./header";
 import '../asets/detail.css';
 import Footer from "./footer";
+import { AppContext } from "./abayacontext";
+import { useContext } from "react";
+
 function AbayaDetail(){
     const location= useLocation();
     const {from} = location.state;
+
+    const{abaya,setAbaya}=useContext(AppContext);
+   
+const addToCart=(item)=>{
+    const updated = abaya.map(itm=> itm.id=== item.id
+        ? {...itm , selected:true}:itm 
+        )
+        setAbaya(updated);
+        console.log(updated);
+}
 
     return(
         <div>
@@ -34,7 +47,7 @@ function AbayaDetail(){
             L
           </label>
                     </div>
-                    <button className="b1" style={{display:'block',marginTop:'10px' }}>Add to Cart</button>
+                    <button className="b1" onClick={e=>addToCart(from)} style={{display:'block',marginTop:'10px' }}>Add to Cart</button>
                     <button className="b1" style={{marginTop:'10px'}}>Buy Now</button>
                     
                 </div>

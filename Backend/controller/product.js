@@ -3,21 +3,22 @@ export const getProduct=async(req,res)=>{
     try{
         const data=await productmodel.find()
         res.json(data)
+        console.log(data);
     }catch(e){
-
+        console.log("error in the getProduct is : ", e);
     }
     
 }
 
 export const postProduct= async (req,res)=>{
     try{
-        const {name, price, category}=req.body
-        console.log(req.file)
+        const {name, price, category,image}=req.body
+     
         const product={
             name: name,
             price : price,
             category : category,
-            image:req.file.path
+            image:image
         }
         
       const newItem= new productmodel(product);

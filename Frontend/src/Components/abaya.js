@@ -5,10 +5,22 @@ import { Link } from "react-router-dom";
 import Footer from "./footer";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "./abayacontext";
-
+import { getProduct } from "../Service/api";
 
 function Abaya(){
-     const{abaya,setAbaya}=useContext(AppContext);
+    //  const{abaya,setAbaya}=useContext(AppContext);
+
+     const [abaya,setAbaya] = useState([]);
+     
+  useEffect(()=>{
+    getProducts();
+  })
+
+  const getProducts=async()=>{
+    const pr = await getProduct();
+    setAbaya(pr);
+  }
+
         const product = abaya.filter(pr=>pr.cat==="abaya");
 
     const addToCart=(item)=>{

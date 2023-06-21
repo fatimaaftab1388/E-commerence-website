@@ -6,7 +6,7 @@ import {AppContext} from './abayacontext';
 
 const Cart = ({  }) => {
 
-   const { abaya, setAbaya,hijab,setHijab }= useContext(AppContext);
+   const { abaya, setAbaya }= useContext(AppContext);
    
    
    const itm = abaya.filter((item)=> item.selected === true);

@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "./adminnav";
 import "../asets/admindashboard.css";
 import { useState } from "react";
-import { addProduct } from "../Service/api";
+import { addProduct, getProduct } from "../Service/api";
 
 function AddProduct() {
   const [product, setProduct] = useState({
     name: "",
     category: "",
     price: 0,
-    image: null,
+    image: "",
   });
+
   const saveDetails = async (e) => {
     e.preventDefault();
     console.log("after saving : ", product);
@@ -26,10 +27,7 @@ function AddProduct() {
   const handleChange = (e) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
-  const handleImage = (e) => {
-    console.log(e.target.files[0])
-    setProduct({ ...product, image: e.target.files[0] });
-  };
+
   return (
     <div>
       <div>
@@ -80,7 +78,7 @@ function AddProduct() {
               class="form-control"
               aria-label="First name"
               name="image"
-              onChange={handleImage}
+              onChange={handleChange}
             />
           </div>
         </div>

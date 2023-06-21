@@ -6,7 +6,16 @@ const productStructure = mongoose.Schema(
     name:String,
     price: Number,
     category:String,
-    image:String
+    image:{
+        type:String,
+        required:true
+    },
+    selected:{
+        type:Boolean,
+        default:false
+
+    }
+
 }
 );
 

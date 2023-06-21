@@ -1,12 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../asets/cart.css';
 import {AppContext} from './abayacontext';
+import { getProduct } from '../Service/api';
 
 
+const Cart = () => {
 
-const Cart = ({  }) => {
+  const [abaya,setAbaya]  = useState([]);
 
-   const { abaya, setAbaya }= useContext(AppContext);
+  useEffect(() => {
+    getProducts();
+    console.log(abaya);
+  },[]);
+
+  const getProducts = async () => {
+    const products = await getProduct();
+    setAbaya(products.data);
+    
+  };
+
    
    
    const itm = abaya.filter((item)=> item.selected === true);
@@ -21,6 +33,17 @@ const Cart = ({  }) => {
       })
     );
   };
+
+  // const handleIncrement = (item) => {
+  //   setAbaya((prevAbaya) =>
+  //     prevAbaya.map((abayaItem) => {
+  //       if (abayaItem.name === item.name) {
+  //         return { ...abayaItem, quantity: abayaItem.quantity + 1 };
+  //       }
+  //       return abayaItem;
+  //     })
+  //   );
+  // };
 
   return (
       <div className="cart-container">
@@ -38,6 +61,9 @@ const Cart = ({  }) => {
                 <span className="cart-item-price">{item.price}</span>
                 <button className="cart-item-remove" onClick={() => handleRemove(item)}>
                   Remove
+                </button>
+                <button className="cart-item-remove" >
+                  Increment
                 </button>
               </li>
             ))}

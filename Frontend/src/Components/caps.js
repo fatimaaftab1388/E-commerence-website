@@ -1,20 +1,35 @@
 import '../asets/caps.css';
 import Header from './header';
-import { useState,useContext } from 'react';
+import { useState,useContext ,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Footer from './footer';
 import { AppContext } from './abayacontext';
-function Caps(){
-    const{abaya,setAbaya}=useContext(AppContext);
-    const product = abaya.filter(pr=>pr.cat==="cap");
+import { getProduct } from '../Service/api';
 
-const addToCart=(item)=>{
-    const updated = abaya.map(itm=> itm.id=== item.id
-        ? {...itm , selected:true}:itm 
-        )
-        setAbaya(updated);
-        console.log(updated);
-}
+function Caps(){
+    const [cap, setCap] = useState([]);
+
+  useEffect(() => {
+    getProducts();
+    console.log(cap);
+  }, []);
+
+    
+  const getProducts = async () => {
+    const products = await getProduct();
+    setCap(products.data);
+  };
+
+  const addToCart = (item) => {
+    const updated = cap.map((itm) =>
+      itm._id === item._id ? { ...itm, selected: true } : itm
+    );
+    console.log("item is : ", cap[0]._id);
+    setCap(updated);
+    console.log(updated);
+  };
+  const filteredCap = cap.filter((item) => item.category === "cap");
+
     return(
         <div>
             <Header />
@@ -25,22 +40,33 @@ const addToCart=(item)=>{
                 <h2>OTHER ACCESSORIES</h2>
             </div>
             <div>
-                <div className="abaya-container">
-                {product.map((caps) => (
-            <div className="abaya-card" key={caps.id}>
-                <Link to="/details" state={{from:caps}}><img src={caps.image} alt={caps.name} className="abaya-img"/></Link>
-                <div id="sm-cart">
-                <p style={{marginTop:'1%',marginBottom:"1%"}}>{caps.name}</p>
-                <h6>Rs. {caps.price} PKR</h6>
-                    <button className='b1' onClick={e=>addToCart(caps)}>
-                        <img src='../images/shopping-bag.png' alt='l' style={{width:'21px',height:'21px',marginRight:'3%',marginBottom:'1%'}}/>ADD TO CART</button>
-                     </div>
-                     </div>
-                 ))}
-
+        <div className="abaya-container">
+          {filteredCap.map((item) => (
+            <div className="abaya-card" key={item._id}>
+              <Link to="/details" state={{ from: item }}>
+                <img
+                  src={`http://localhost:5000/uploads/${item.image}`}
+                  alt={item.name}
+                  className="abaya-img"
+                />
+              </Link>
+              <div id="sm-cart">
+                <p style={{ marginTop: '1%', marginBottom: "1%" }}>{item.name}</p>
+                <h6>Rs. {item.price} PKR</h6>
+                <button className='b1' onClick={() => addToCart(item)}>
+                  <img
+                    src='../images/shopping-bag.png'
+                    alt='l'
+                    style={{ width: '21px', height: '21px', marginRight: '3%', marginBottom: '1%' }}
+                  />
+                  ADD TO CART
+                </button>
+              </div>
             </div>
+          ))}
         </div>
-        <Footer />
-        </div>
+      </div>
+      <Footer />
+    </div>
     )
 }export default Caps;

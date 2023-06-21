@@ -9,7 +9,8 @@ function AddProduct() {
     name: "",
     category: "",
     price: 0,
-    image: null
+    image: null,
+    selected:false
   });
 
   const saveDetails = async (e) => {

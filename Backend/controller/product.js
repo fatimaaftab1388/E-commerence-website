@@ -12,13 +12,15 @@ export const getProduct=async(req,res)=>{
 
 export const postProduct= async (req,res)=>{
     try{
-        const {name, price, category}=req.body
-        const image=req.file.path;
+        const {name, price, category,selected}=req.body
+        const image=req.file.filename;
+        console.log("The image is : ", image);
         const product={
             name: name,
             price : price,
             category : category,
-            image:image
+            image:image,
+            selected:selected
         }
         
       const newItem= new productmodel(product);

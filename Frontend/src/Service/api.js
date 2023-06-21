@@ -14,3 +14,6 @@ export const addUser=async(user)=>{
     return await axios.post(`${url}/user`,user);
 }
 
+export const getUser=async()=>{
+    return await axios.get(`${url}/user`);
+}

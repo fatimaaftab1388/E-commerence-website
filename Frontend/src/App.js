@@ -13,6 +13,7 @@ import About from "./Components/aboutus";
 import { useState } from "react";
 import Admin from "./Components/admindashboard";
 import AddProduct from "./Components/adminaddprod";
+import Customers from "./Components/admincustomer";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -43,6 +44,7 @@ function App() {
         <Route path="/Components/aboutus" element={<About />}></Route>
         <Route path="/Components/admin" element={<Admin />}></Route>
         <Route path="/Components/adminaddprod" element={<AddProduct />}></Route>
+        <Route path="/Components/admincustomer" element={<Customers />}></Route>
       </Routes>
     </div>
   );

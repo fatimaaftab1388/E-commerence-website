@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url= "http://localhost:5000";
+const url= "https://halalwardrobe-server.onrender.com";
 
 export const addProduct= async(data)=>{
     return await axios.post(`${url}/product`,data)

@@ -24,6 +24,12 @@ export const postuser= async (req,res)=>{
     }
 
 
-    export const getuser=()=>{
-
+    export const getuser=async(req,res)=>{
+        try{
+            const data=await userModel.find()
+            res.json(data)
+            console.log(data);
+        }catch(e){
+            console.log("error in the getUser is : ", e);
+        }
     }

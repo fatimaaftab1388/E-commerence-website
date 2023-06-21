@@ -37,15 +37,16 @@ function AddProduct() {
       <div>
         <Nav />
       </div>
-      <div className="add-product">
+      <div className="add-product" >
         <h3>Add New Product</h3>
         <div class="row" style={{ marginTop: "2%" }}>
           <div class="col">
+            <label style={{marginTop:'2%',marginBottom:'1%'}}>Product Name :</label>
             <input
               type="text"
               class="form-control"
-              placeholder="Product Name"
-              aria-label="First name"
+              
+              aria-label="name"
               name="name"
               onChange={handleChange}
             />
@@ -53,10 +54,10 @@ function AddProduct() {
         </div>
         <div className="row" style={{ marginTop: "2%" }}>
           <div class="col">
+          <label style={{marginTop:'2%',marginBottom:'1%'}}>Product Price :</label>
             <input
               type="number"
               class="form-control"
-              placeholder="Product Price "
               aria-label="Last name"
               name="price"
               onChange={handleChange}
@@ -65,6 +66,12 @@ function AddProduct() {
         </div>
         <div class="row" style={{ marginTop: "2%" }}>
           <div class="col">
+          <label style={{marginTop:'2%',marginBottom:'1%'}}>Product Category :</label>
+          <select className="form-control">
+            <option>
+              abaya
+            </option>
+          </select>
             <input
               type="text"
               class="form-control"
@@ -77,6 +84,7 @@ function AddProduct() {
         </div>
         <div class="row" style={{ marginTop: "2%" }}>
           <div class="col">
+          <label style={{marginTop:'2%',marginBottom:'1%'}}>Product Name :</label>
             <input
               type="file"
               class="form-control"

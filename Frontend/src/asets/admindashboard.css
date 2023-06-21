@@ -50,4 +50,8 @@ margin-left: 2%;
     width: 50%;
     margin-top:1% ;
     margin-left: 27%;
+    border: 1px solid rgb(190, 188, 188);
+    padding: 3%;
+    border-radius: 20px;
+    background-color:  rgba(196, 175, 175, 0.5);;
   }

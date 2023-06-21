@@ -1,6 +1,9 @@
 import mongoose from "mongoose"
+import dotenv from 'dotenv'
 
-const url='mongodb+srv://fatimaaftab1388:fati1388@cluster0.bw59lgd.mongodb.net/?retryWrites=true&w=majority'
+dotenv.config()
+
+const url=process.env.MONGODB_URL
 
 const connection=mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true})
 

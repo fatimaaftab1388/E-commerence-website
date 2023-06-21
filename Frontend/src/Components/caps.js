@@ -45,7 +45,7 @@ function Caps(){
             <div className="abaya-card" key={item._id}>
               <Link to="/details" state={{ from: item }}>
                 <img
-                  src={`http://localhost:5000/uploads/${item.image}`}
+                  src={`https://halalwardrobe-server.onrender.com/uploads/${item.image}`}
                   alt={item.name}
                   className="abaya-img"
                 />

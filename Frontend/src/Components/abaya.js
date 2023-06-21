@@ -1,10 +1,8 @@
 import Header from "./header";
 import '../asets/abaya.css';
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
-import { useNavigate } from "react-router-dom";
-import { AppContext } from "./abayacontext";
 import { getProduct } from "../Service/api";
 
 function Abaya() {
@@ -53,7 +51,7 @@ function Abaya() {
           {filteredAbaya.map((item) => (
             <div className="abaya-card" >
               <Link to="/details" state={{ from: item }}>
-              <img src={`http://localhost:5000/uploads/${item.image}`} alt={item.name} className="abaya-img" />
+              <img src={`https://halalwardrobe-server.onrender.com/uploads/${item.image}`} alt={item.name} className="abaya-img" />
              </Link>
               <div id="sm-cart">
                 <p style={{ marginTop: '1%', marginBottom: "1%" }}>{item.name}</p>

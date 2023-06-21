@@ -48,7 +48,7 @@ function Bundles() {
           {filteredAbaya.map((item) => (
             <div className="abaya-card" >
               <Link to="/details" state={{ from: item }}>
-              <img src={`http://localhost:5000/uploads/${item.image}`} alt={item.name} className="abaya-img" />
+              <img src={`https://halalwardrobe-server.onrender.com/uploads/${item.image}`} alt={item.name} className="abaya-img" />
              </Link>
               <div id="sm-cart">
                 <p style={{ marginTop: '1%', marginBottom: "1%" }}>{item.name}</p>

@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Nav from "./adminnav";
 import "../asets/admindashboard.css";
 import { useState } from "react";
-import { addProduct, getProduct } from "../Service/api";
+import { addProduct } from "../Service/api";
 
 function AddProduct() {
   const [product, setProduct] = useState({

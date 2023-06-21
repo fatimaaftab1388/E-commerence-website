@@ -1,7 +1,6 @@
 import React, { createContext, useState } from "react";
 
-import { useEffect } from "react";
-import { getProduct } from "../Service/api";
+
 
 // export const Items = [
 //   // Your items array

@@ -56,7 +56,7 @@ const Cart = () => {
           <ul>
             {itm.map((item) => (
               <li key={item.name} className="cart-item">
-                <img src={item.image} alt={item.name} className="cart-item-image" />
+                <img src={`https://halalwardrobe-server.onrender.com`+item.image} alt={item.name} className="cart-item-image" />
                 <span className="cart-item-name">{item.name}</span>
                 <span className="cart-item-price">{item.price}</span>
                 <button className="cart-item-remove" onClick={() => handleRemove(item)}>

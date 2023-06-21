@@ -12,8 +12,8 @@ export const getProduct=async(req,res)=>{
 
 export const postProduct= async (req,res)=>{
     try{
-        const {name, price, category,image}=req.body
-     
+        const {name, price, category}=req.body
+        const image=req.file.path;
         const product={
             name: name,
             price : price,

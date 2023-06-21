@@ -9,7 +9,7 @@ function AddProduct() {
     name: "",
     category: "",
     price: 0,
-    image: "",
+    image: null
   });
 
   const saveDetails = async (e) => {
@@ -28,6 +28,9 @@ function AddProduct() {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
 
+  const handleImage=(e)=>{
+    setProduct({...product,[e.target.name]:e.target.files[0]});
+  }
   return (
     <div>
       <div>
@@ -78,7 +81,7 @@ function AddProduct() {
               class="form-control"
               aria-label="First name"
               name="image"
-              onChange={handleChange}
+              onChange={handleImage}
             />
           </div>
         </div>

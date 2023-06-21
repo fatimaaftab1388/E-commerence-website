@@ -18,5 +18,6 @@ connection.then(()=>{
 
 app.use('/product',productRouter)
 app.use('/user',postuser)
+app.use('/upload',express.static('upload'));
 
 app.listen(5000)

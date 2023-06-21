@@ -14,5 +14,3 @@ export const addUser=async(user)=>{
     return await axios.post(`${url}/user`,user);
 }
 
-axios.get();
-axios.post();

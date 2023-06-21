@@ -11,8 +11,15 @@ const Cart = ({  }) => {
    
    const itm = abaya.filter((item)=> item.selected === true);
    
-  const handleRemove = (item) => {
-    // removeFromCart(item);
+   const handleRemove = (item) => {
+    setAbaya((prevAbaya) =>
+      prevAbaya.map((abayaItem) => {
+        if (abayaItem.name === item.name) {
+          return { ...abayaItem, selected: false };
+        }
+        return abayaItem;
+      })
+    );
   };
 
   return (

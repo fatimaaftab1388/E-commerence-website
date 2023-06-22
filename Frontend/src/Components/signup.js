@@ -113,6 +113,7 @@ function Login() {
               type="submit"
               style={{ marginTop: "6%" }}
               onClick={(e) => addDetails(e)}
+              
             >
               Create
             </button>

@@ -24,7 +24,7 @@ function Header(){
 
             </div>
             <div className='logo-div'>
-            <img src='../images/wishlist.png' alt='button' className='bimg' onClick={handleadmin}/>
+            {/* <img src='../images/wishlist.png' alt='button' className='bimg' onClick={handleadmin}/> */}
             <Link to='/Components/cartdetail'><img src='../images/cartlogo.png' alt='button' className='bimg'/></Link>
             <Link to='/Components/loginform'><img src='../images/loginbutton.png' alt='button' className='bimg' /></Link>
             

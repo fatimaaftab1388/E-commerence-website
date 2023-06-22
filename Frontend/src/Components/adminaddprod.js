@@ -67,7 +67,7 @@ function AddProduct() {
         <div class="row" style={{ marginTop: "2%" }}>
           <div class="col">
           <label style={{marginTop:'2%',marginBottom:'1%'}}>Product Category :</label>
-          <select className="form-control">
+          {/* <select className="form-control">
             <option>
               abaya
             </option>
@@ -83,7 +83,7 @@ function AddProduct() {
             <option>
               cap
             </option>
-          </select>
+          </select> */}
             <input
               type="text"
               class="form-control"

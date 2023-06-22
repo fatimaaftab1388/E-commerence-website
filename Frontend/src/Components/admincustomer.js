@@ -22,8 +22,8 @@ function Customers() {
         <div>
             <Nav />
         </div>
-      <h2 style={{ textAlign: 'center' ,marginTop:'3%'}}>Customers Sign Up Data</h2>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+      <h2 style={{ textAlign: 'center' ,marginTop:'3%',marginBottom:'2%'}}>Customers' Data</h2>
+      <table style={{ width: '90%', borderCollapse: 'collapse' ,padding:'2%',marginLeft:'5%',}}>
         <thead>
           <tr>
             <th style={tableHeaderStyle}>First Name</th>

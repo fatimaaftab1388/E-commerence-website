@@ -23,8 +23,8 @@ const Nav = () => {
         <ul className="menu">
           <li className="menu-item" onClick={handleHome}>Home</li>
           <li className="menu-item" onClick={handleAdd}>Add Product</li>
-          <li className="menu-item"><a href="#">Delete Product</a></li> 
-          <li className="menu-item"><a href="#">Orders</a></li>
+          <li className="menu-item">Delete Product</li> 
+          <li className="menu-item">Orders</li>
           <li className="menu-item" onClick={handlecustomer}>Customers</li>
         </ul>
       </div>

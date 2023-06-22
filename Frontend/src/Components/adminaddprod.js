@@ -71,6 +71,18 @@ function AddProduct() {
             <option>
               abaya
             </option>
+            <option>
+              hijab
+            </option>
+            <option>
+              niqab
+            </option>
+            <option>
+              bundle
+            </option>
+            <option>
+              cap
+            </option>
           </select>
             <input
               type="text"

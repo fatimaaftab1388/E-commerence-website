@@ -21,29 +21,36 @@ const ManageProducts = () => {
   return (
     <div className="max-w-screen mx-auto mt-[80px] px-8 py-6">
         <Nav/>
-      <h2 className="text-xl text-[#8a4af3] font-bold mb-4">All Products</h2>
+      <h2 className="text-xl text-[#8a4af3] font-bold mb-4" style={{textAlign:'center',marginTop:"2%"}}>Delete Products</h2>
       {products.length === 0 ? (
         <p>No products available.</p>
       ) : (
-        <table className="table-auto w-full">
+        <table className="table-auto w-full" style={{width:'100%'}}>
           <thead>
             <tr>
-              <th className="px-4 py-2">Title</th>
+              <th className="px-4 py-2">Products</th>
               <th className="px-4 py-2">Price</th>
-              <th className="px-4 py-2">Actions</th>
+              <th className="px-4 py-2">Delete</th>
             </tr>
           </thead>
           <tbody>
             {products&&products.map((product) => (
               <tr key={product._id}>
+                <td className="border px-4 py-2"><img src={product.img} alt={product.name}></img></td>
                 <td className="border px-4 py-2">{product.name}</td>
                 <td className="border px-4 py-2">{product.price}</td>
                 <td className="border px-4 py-2">
                   <button
-                    className="btn btn-red"
+                    className="btn btn-red" style={{backgroundColor:"pink"}}
                     onClick={() => handleDelete(product._id)}
                   >
                     Delete
+                  </button>
+                  <button
+                    className="btn btn-red" style={{backgroundColor:'cyan'}}
+                    onClick={() => handleDelete(product._id)}
+                  >
+                    Update
                   </button>
                 </td>
               </tr>

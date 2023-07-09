@@ -38,7 +38,7 @@ function Content(){
                     NEW ARRIVIAL ABAYAS
                 </h3>
                 <div>
-                    <img src="E:\E-commerence-website\Frontend\public\images\fatima.png" alt="aa"/>
+                    <img src="../images/a5.png" alt="aa"/>
                 </div>
                 <h3 className="new-arr">
                     NEW ARRIVIAL HIJABS

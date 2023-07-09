@@ -39,7 +39,7 @@ const ManageProducts = () => {
                 <td className="border px-4 py-2"><img src={product.img} alt={product.name}></img></td>
                 <td className="border px-4 py-2">{product.name}</td>
                 <td className="border px-4 py-2">{product.price}</td>
-                <td className="border px-4 py-2">
+                <td className="border px-4 py-2"style={{width:'15%'}}>
                   <button
                     className="btn btn-red" style={{backgroundColor:"pink"}}
                     onClick={() => handleDelete(product._id)}
@@ -47,7 +47,7 @@ const ManageProducts = () => {
                     Delete
                   </button>
                   <button
-                    className="btn btn-red" style={{backgroundColor:'cyan'}}
+                    className="btn btn-red" style={{backgroundColor:'cyan',marginLeft:'10%'}}
                     onClick={() => handleDelete(product._id)}
                   >
                     Update

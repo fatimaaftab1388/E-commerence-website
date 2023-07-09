@@ -1,10 +1,6 @@
 import '../asets/header.css';
 import { Link, useNavigate } from 'react-router-dom';
 function Header(){
-    const nav=useNavigate();
-    const handleadmin=()=>{
-        nav('/Components/admin');
-    }
     return(
         <div className='nav-bar'>
             <div className='free-ship'><h6>Free shipping for orders above than Rs.3000</h6></div>

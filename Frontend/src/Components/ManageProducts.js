@@ -36,7 +36,6 @@ const ManageProducts = () => {
           <tbody>
             {products&&products.map((product) => (
               <tr key={product._id}>
-                <td className="border px-4 py-2"><img src={product.img} alt={product.name}></img></td>
                 <td className="border px-4 py-2">{product.name}</td>
                 <td className="border px-4 py-2">{product.price}</td>
                 <td className="border px-4 py-2"style={{width:'15%'}}>

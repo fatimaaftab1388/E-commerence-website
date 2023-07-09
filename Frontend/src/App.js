@@ -14,6 +14,7 @@ import { useState } from "react";
 import Admin from "./Components/admindashboard";
 import AddProduct from "./Components/adminaddprod";
 import Customers from "./Components/admincustomer";
+import ManageProducts from "./Components/ManageProducts";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -45,6 +46,7 @@ function App() {
         <Route path="/Components/admin" element={<Admin />}></Route>
         <Route path="/Components/adminaddprod" element={<AddProduct />}></Route>
         <Route path="/Components/admincustomer" element={<Customers />}></Route>
+        <Route path="/Components/admindelete" element={<ManageProducts />}></Route>
       </Routes>
     </div>
   );

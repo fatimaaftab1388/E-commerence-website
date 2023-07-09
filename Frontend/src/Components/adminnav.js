@@ -14,6 +14,9 @@ const Nav = () => {
   const handlecustomer=()=>{
     navigate('/Components/admincustomer');
   }
+  const handleDelete=()=>{
+    navigate('/Components/admindelete');
+  }
   return (
     <div className="navbar">
       <div className="logo2-container">
@@ -23,7 +26,7 @@ const Nav = () => {
         <ul className="menu">
           <li className="menu-item" onClick={handleHome}>Home</li>
           <li className="menu-item" onClick={handleAdd}>Add Product</li>
-          <li className="menu-item">Delete Product</li> 
+          <li className="menu-item" onClick={handleDelete}>Delete Product</li> 
           <li className="menu-item">Orders</li>
           <li className="menu-item" onClick={handlecustomer}>Customers</li>
         </ul>

@@ -1,8 +1,19 @@
 import '../asets/content.css';
 import {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 function Content(){
+    const nav=new useNavigate();
+
+    const abayapage=()=>{
+        nav('/Components/abaya');
+    }
+    const hijabpage=()=>{
+        nav('/Components/hijab')
+    }
+    const bundlepage=()=>{
+        nav('/Components/hijabbundles')
+    }
     
     
 
@@ -35,14 +46,23 @@ function Content(){
                 </div>
                 </div>
                 <h3 className="new-arr">
-                    NEW ARRIVIAL ABAYAS
+                    FANCY NEW ABAYAS
                 </h3>
                 <div>
-                    <img src="../images/a5.png" alt="aa"/>
+                    <img src="../images/fatima.png" alt="aa" style={{width:'100%'}} onClick={abayapage}/>
                 </div>
                 <h3 className="new-arr">
-                    NEW ARRIVIAL HIJABS
+                    OUR TRENDING HIJABS
                 </h3>
+                <div>
+                    <img src="../images/fatima3.png" alt="aa" style={{width:'100%'}} onClick={hijabpage}/>
+                </div>
+                <h3 className="new-arr">
+                    BEST HIJAB BUNDLES
+                </h3>
+                <div>
+                    <img src="../images/fatima2.png" alt="aa" style={{width:'100%'}} onClick={bundlepage}/>
+                </div>
                 
         </div>
     )

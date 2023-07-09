@@ -41,3 +41,19 @@ export const postProduct = async (req, res) => {
     console.log("Error during saving the item is : ", e);
   }
 };
+
+
+export const updateProduct = async (req, res) => {
+  try {
+   console.log(req.body)
+   console.log(req.params.id)
+   
+   const updatedUser=await productmodel.findByIdAndUpdate(req.params.id,req.body,{
+    new:true,
+    runValidators:true
+   })
+   res.json(updatedUser)
+  } catch (e) {
+    console.log("Error during saving the item is : ", e);
+  }
+};

@@ -33,3 +33,4 @@ export const postuser= async (req,res)=>{
             console.log("error in the getUser is : ", e);
         }
     }
+    

@@ -20,4 +20,4 @@ app.use('/product',productRouter)
 app.use('/user',postuser)
 app.use('/uploads',express.static('uploads'));
 
-app.listen(8000)
+app.listen(5000)

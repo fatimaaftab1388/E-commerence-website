@@ -13,12 +13,14 @@ function Header(){
             <div className='nav-div'>
                 <nav>
                     <ul>
+                    
                         <Link to='/Components/home'><li>HOME</li></Link>
                         <Link to='/Components/abaya'><li>ABAYAS</li></Link>
                         <Link to='/Components/hijab'><li>HIJABS</li></Link>
                         <Link to='/Components/niqab'><li>NIQABS</li></Link>
                         <Link to='/Components/hijabbundles'><li>HIJAB BUNDLES</li></Link>
                         <Link to='/Components/caps'><li>HIJAB CAPS</li></Link>
+                        <Link to='/Components/admin'><li>Admin</li></Link>
                     </ul>
                 </nav>
 

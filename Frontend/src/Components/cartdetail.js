@@ -10,17 +10,20 @@ const Cart = () => {
 
   useEffect(() => {
     getProducts();
-    console.log(abaya);
   },[]);
 
   const getProducts = async () => {
     const products = await getProduct();
     setAbaya(products.data);
+
+    console.log(products);
+    console.log(abaya);
     
   };
 
-   
-   
+  
+  
+
    const itm = abaya.filter((item)=> item.selected === true);
    
    const handleRemove = (item) => {

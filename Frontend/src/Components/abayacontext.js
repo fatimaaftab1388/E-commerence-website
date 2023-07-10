@@ -83,12 +83,11 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   
-
-
+  const [currUser,setCurrUser]=useState({})
   const [abaya, setAbaya] = useState([]);
 
   // const [cart,set]
-  const store = { abaya, setAbaya };
+  const store = { abaya, setAbaya ,currUser, setCurrUser};
 
   return (
     <AppContext.Provider value={store}>

@@ -1,11 +1,14 @@
-import { useState ,useMemo} from "react";
+import { useState ,useMemo, useContext} from "react";
 import { useRef ,useEffect} from "react";
 import '../asets/login.css';
 import {  useNavigate} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { login } from "../Service/api";
+import { AppContext } from "./abayacontext";
 
 function Login(){
+    const {currUser,setCurrUser}=useContext(AppContext)
     const nav=useNavigate();
     const naviagteHook=()=>{
         nav('/Components/signup');
@@ -32,10 +35,15 @@ function Login(){
         console.log(e.currentTarget.value);
         setPassword(e.currentTarget.value);
     }
-   
-    const handleSubmit = useMemo(() => (e) => {
+   function setUser(data){
+    
+   }
+    const handleSubmit = useMemo(() => async(e) => {
         e.preventDefault();
-        nav('/');
+        const res=await login({email,password})
+        setCurrUser(res.data)
+
+        nav('/Components/admin');
       }, [email,password]);
    
     return(
@@ -50,7 +58,7 @@ function Login(){
             <label style={{marginRight:'85%',paddingBottom:'2%',fontSize:'1.2em'}}>Password</label>
             <input type="password"  onChange={handlePasswordChange} value={password} required/>
             <p style={{marginLeft:'70%'}}>Forgot Password?</p>
-            <button type="submit">Login</button>
+            <button type="submit" >Login</button>
             <h6 onClick={naviagteHook}>Don't have account? Create Account!</h6>
             </form>
             <div className="div-fig">

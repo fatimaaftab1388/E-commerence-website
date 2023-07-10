@@ -10,8 +10,8 @@ function Login() {
     nav(-1);
   };
   const [user, setUser] = useState({
-    FirstName: " ",
-    LastName: " ",
+    FirstName: "",
+    LastName: "",
     email: "",
     password: "",
   });

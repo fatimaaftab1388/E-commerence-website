@@ -4,7 +4,10 @@ const userStructure=mongoose.Schema(
     {
         FirstName:String,
         LastName:String,
-        email:String,
+        email:{
+            type:String,
+            unique:true
+        },
         password:String
     }
 );

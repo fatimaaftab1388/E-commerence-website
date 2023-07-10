@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { getProduct, deleteProduct,updateProduct } from '../Service/api';
 import Nav from "./adminnav";
+import { AppContext } from "./abayacontext";
 
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showUpdateForm, setShowUpdateForm] = useState(false);
   const [updatedProduct, setUpdatedProduct] = useState({});
-
+  const {currUser}=useContext(AppContext)
   useEffect(() => {
+    console.log(currUser)
     fetchList();
   }, [selectedProduct]);
 

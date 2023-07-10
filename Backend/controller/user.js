@@ -1,4 +1,7 @@
 import { userModel } from "../models/user.js";
+import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
+dotenv.config()
 
 
 export const postuser= async (req,res)=>{
@@ -22,7 +25,22 @@ export const postuser= async (req,res)=>{
             console.log("Error during saving the item is : ",e);
         }
     }
+    export const login=async(req ,res)=>{
+        try{
+            const {email,password}=req.body
+            const user=await userModel.findOne({email})
+            if(user.email===email && user.password===password){
+                const token=jwt.sign({...user._doc},process.env.ACCESS_TOKEN);
+                res.json({...user._doc,token:token});
+            }
+               
+            
+        }catch(e){
+            console.log(e)
+            res.sendStatus(500)
+        }
 
+    }
 
     export const getuser=async(req,res)=>{
         try{

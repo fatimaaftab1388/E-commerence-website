@@ -94,8 +94,8 @@ const ManageProducts = () => {
       )}
 
       {showUpdateForm && selectedProduct && (
-        <div>
-          <h2>Update Product Form</h2>
+        <div style={{marginLeft:'41%'}}>
+          <h2 style={{marginTop:'2%'}}>Update Product Form</h2>
           <form>
             <div>
               <label htmlFor="name">Name:</label>
@@ -103,23 +103,27 @@ const ManageProducts = () => {
                 type="text"
                 id="name"
                 name="name"
+                class="form-control"
+                style={{width:'40%',marginTop:'2%'}}
                 value={updatedProduct.name}
                 onChange={handleInputChange}
               />
             </div>
             <div>
-              <label htmlFor="price">Price:</label>
+              <label htmlFor="price" style={{marginTop:'2%'}}>Price:</label>
               <input
                 type="text"
                 id="price"
                 name="price"
+                class="form-control"
+                style={{width:'40%',marginTop:'2%'}}
                 value={updatedProduct.price}
                 onChange={handleInputChange}
               />
             </div>
             {/* Add other input fields for additional attributes */}
           </form>
-          <button onClick={handleSaveClick}>Save</button>
+          <button className="btn btn-red" style={{ backgroundColor: 'pink', marginLeft: '17%',marginTop:'2%' }} onClick={handleSaveClick}>Save</button>
         </div>
       )}
     </div>

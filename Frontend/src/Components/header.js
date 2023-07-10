@@ -16,7 +16,7 @@ function Header(){
                         <Link to='/Components/niqab'><li>NIQABS</li></Link>
                         <Link to='/Components/hijabbundles'><li>HIJAB BUNDLES</li></Link>
                         <Link to='/Components/caps'><li>HIJAB CAPS</li></Link>
-                        <Link to='/Components/admin'><li>Admin</li></Link>
+                    
                     </ul>
                 </nav>
 

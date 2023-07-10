@@ -21,8 +21,13 @@ export const addUser=async(user)=>{
     return await axios.post(`${url}/user`,user);
 }
 
-export const getUser=async()=>{
-    return await axios.get(`${url}/user`);
+export const getUser=async(token)=>{
+    return await axios.get(`${url}/user`,{
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
 }
 
 

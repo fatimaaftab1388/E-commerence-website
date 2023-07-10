@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { getUser } from '../Service/api';
 import { useState, useEffect } from 'react';
 import Nav from './adminnav';
+import { AppContext } from './abayacontext';
 
 function Customers() {
   const [user, setUser] = useState([]);
+  const {currUser}=useContext(AppContext)
 
   useEffect(() => {
     getUsers();
@@ -12,7 +14,7 @@ function Customers() {
   }, []);
 
   const getUsers = async () => {
-    const users = await getUser();
+    const users = await getUser(currUser.token);
     setUser(users.data);
   };
 

@@ -35,9 +35,7 @@ function Login(){
         console.log(e.currentTarget.value);
         setPassword(e.currentTarget.value);
     }
-   function setUser(data){
-    
-   }
+   
     const handleSubmit = useMemo(() => async(e) => {
         e.preventDefault();
         const res=await login({email,password})

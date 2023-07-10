@@ -5,7 +5,7 @@ const router = express.Router();
 
 import { authenticateToken } from "../middlewares/Authenticator.js";
 
-router.post("/", authenticateToken,postuser);
+router.post("/",postuser);
 router.post('/login',login)
 
 router.get("/",authenticateToken, getuser);

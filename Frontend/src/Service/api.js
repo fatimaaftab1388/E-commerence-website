@@ -11,7 +11,7 @@ export const getProduct=async()=>{
 }
 
 export const updateProduct=async(id,updatedProduct)=>{
-    return await axios.put(`${url}/product/${id}`,updatedProduct);
+    return await axios.put(`${url}/product/:id`,updatedProduct);
 }
 export const deleteProduct=async(id)=>{
     return await axios.delete(`${url}/product/`+id);
